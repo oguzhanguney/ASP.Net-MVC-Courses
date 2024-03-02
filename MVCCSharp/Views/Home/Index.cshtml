@@ -7,6 +7,8 @@
 @{ 
     string ad = "Oğuzhan";
     string soyad = "Güney";
+    string mesaj = "Sayfa postback olmadı";
+
 }
 @{
     Layout = null;
@@ -20,23 +22,37 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
         @* yukarıda tanımladıgımız ad ve soyad degiskenini göstermek için:  *@
         @ad <br />
         @soyad <br />
-        @* Uygulamayı çalıştırdıgımızda Oğuzhan \nGüney görüyoruz. ögeyi denetle dedigimizde br kodlarını görürken C# kodları göremiyoruz 
-            sadece degiskenlerin degerlerini görebiliyoruz.*@
+        @* Uygulamayı çalıştırdıgımızda Oğuzhan \nGüney görüyoruz. ögeyi denetle dedigimizde br kodlarını görürken C# kodları göremiyoruz
+        sadece degiskenlerin degerlerini görebiliyoruz.*@
 
-        @* Link oluşturma:
-            Link oluşturmak için,Öncelikle bir sayfadan diger sayfaya geçmemiz gerekiyor.
-            Bunu farklı bir controller daki farklı bir view e geçirme olarak yapalım.
-            Sayfaya bi kontroller ekleyelim.
-            Şimdi bizim konumumuz olan Home controllerdaki index view dan about controller daki hakkımızdaki view e geçmek için :*@
-        @Html.ActionLink("Hakkımızda Sayfasına Git","Hakkimizda","About") <br />
+        @* 1-Link oluşturma:
+        Link oluşturmak için,Öncelikle bir sayfadan diger sayfaya geçmemiz gerekiyor.
+        Bunu farklı bir controller daki farklı bir view e geçirme olarak yapalım.
+        Sayfaya bi kontroller ekleyelim.
+        Şimdi bizim konumumuz olan Home controllerdaki index view dan about controller daki hakkımızdaki view e geçmek için :*@
+        @Html.ActionLink("Hakkımızda Sayfasına Git", "Hakkimizda", "About") <br />
         @*              (stringlinktext,string action name,string controller name) *@
-        
+
         @* Bir diger yöntem:  *@
         <a href="@Url.Action("Hakkimizda","About")">Hakkımızda Sayfasına Git</a>
+
+        <br />
+        <form method="post">
+            @if (IsPost)
+            {
+                mesaj = "Sayfa postback oldu.";
+            }
+            @mesaj
+            <br />
+            <input type="submit" value="Post Et" />
+        </form>
+
+
+
 
     </div>
 </body>
