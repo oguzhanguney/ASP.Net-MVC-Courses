@@ -1,0 +1,31 @@
+﻿@* View engine : ASP.net Mvc de viewlerdeki yazılan kodlar sonucu oluşan çıktıyı html e render etmek için kullanılan metotdur.
+    Razor view engine ise bu metotlardan biridir.
+    Bunun sonucunda view da html css js dillerinin yanısıra c# ta kullanabiliyoruz.
+    Yazdıgımız sunucu taraflı C# sunucuda derleniyor ve bu büyük bir güvenlik açığı oluşmasını engelliyor.
+    Nasıl yazılır : '@' işareti koyduktan sonra yazdıgımız herşey sunucu taraflı kodlar oluyor,sunucuda derlenir,bize çıktıları gösterilir.
+    Blok yapmak için: '@{ }'*@
+@{ 
+    string ad = "Oğuzhan";
+    string soyad = "Güney";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @* yukarıda tanımladıgımız ad ve soyad degiskenini göstermek için:  *@
+        @ad <br />
+        @soyad <br />
+        @* Uygulamayı çalıştırdıgımızda Oğuzhan \nGüney görüyoruz. ögeyi denetle dedigimizde br kodlarını görürken C# kodları göremiyoruz 
+            sadece degiskenlerin degerlerini görebiliyoruz.*@
+    </div>
+</body>
+</html>
