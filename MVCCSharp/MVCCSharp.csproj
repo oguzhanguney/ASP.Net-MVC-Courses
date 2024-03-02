@@ -106,7 +106,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\About\Hakkimizda.cshtml" />
-    <Content Include="Views\IsPostEg\IsPostIndex.cshtml" />
+    <Content Include="Views\IsPostEg\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

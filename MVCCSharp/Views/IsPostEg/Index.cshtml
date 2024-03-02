@@ -3,6 +3,8 @@
     Layout = null;
 }
 @{
+    string ad = "Oğuzhan";
+    string soyad = "Güney";
     string mesaj = "Sayfa postback olmadı";
 
 }
@@ -12,12 +14,12 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>IsPostIndex</title>
+    <title>Index</title>
 </head>
 <body>
     <div>
         @*2-PostBack(@IsPost):sayfanızın sunucuya gidip geri bize dönmesi anlamına gelir.sayfamızda submit yapan herhangi bir inputa tıkladıgımızda
-            sayfa servera gider gerekli işlemler saglandıktan bize geri döner.sunucuyla haberleşmemizi saglar.*@
+        sayfa servera gider gerekli işlemler saglandıktan bize geri döner.sunucuyla haberleşmemizi saglar.*@
         <form method="post">
             @if (IsPost)
             {
