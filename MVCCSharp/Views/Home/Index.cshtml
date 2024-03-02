@@ -40,20 +40,6 @@
         @* Bir diger yöntem:  *@
         <a href="@Url.Action("Hakkimizda","About")">Hakkımızda Sayfasına Git</a>
 
-        <br />
-        <form method="post">
-            @if (IsPost)
-            {
-                mesaj = "Sayfa postback oldu.";
-            }
-            @mesaj
-            <br />
-            <input type="submit" value="Post Et" />
-        </form>
-
-
-
-
     </div>
 </body>
 </html>
