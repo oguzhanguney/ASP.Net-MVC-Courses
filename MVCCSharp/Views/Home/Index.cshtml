@@ -26,6 +26,18 @@
         @soyad <br />
         @* Uygulamayı çalıştırdıgımızda Oğuzhan \nGüney görüyoruz. ögeyi denetle dedigimizde br kodlarını görürken C# kodları göremiyoruz 
             sadece degiskenlerin degerlerini görebiliyoruz.*@
+
+        @* Link oluşturma:
+            Link oluşturmak için,Öncelikle bir sayfadan diger sayfaya geçmemiz gerekiyor.
+            Bunu farklı bir controller daki farklı bir view e geçirme olarak yapalım.
+            Sayfaya bi kontroller ekleyelim.
+            Şimdi bizim konumumuz olan Home controllerdaki index view dan about controller daki hakkımızdaki view e geçmek için :*@
+        @Html.ActionLink("Hakkımızda Sayfasına Git","Hakkimizda","About") <br />
+        @*              (stringlinktext,string action name,string controller name) *@
+        
+        @* Bir diger yöntem:  *@
+        <a href="@Url.Action("Hakkimizda","About")">Hakkımızda Sayfasına Git</a>
+
     </div>
 </body>
 </html>
