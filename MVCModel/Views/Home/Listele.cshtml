@@ -1,0 +1,69 @@
+﻿@*Öncellikle view e model şablonunu kullandırmamız gerek: *@
+
+@*Bir tane model verisi kullacaksak : @model  MVCModel.Models.Personel   *@
+
+@*Birden fazla model verisi kullacaksak :@model IEnumerable <MVCModel.Models.Personel>  *@
+
+@model IEnumerable<MVCModel.Models.Personel>
+
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Listele</h2>
+
+<table class="table">
+    <tr>
+        @*row*@
+
+        <th>
+            @*header*@
+
+            @*Model çekecegimiz için:DisplayNameFor*@
+
+            @Html.DisplayNameFor(m => m.Id)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.TCKN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(m => m.DogumTarihi)
+        </th>
+    </tr>
+    @*şimdi tablomuzun içerigini dolduralım,modeldeki verileri çekelim.*@
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @*içeriği yazmak için :DisplayFor*@
+                @Html.DisplayFor(mitem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(mitem => item.Ad)
+
+            </td>
+            <td>
+                @Html.DisplayFor(mitem => item.Soyad)
+
+            </td>
+            <td>
+                @Html.DisplayFor(mitem => item.TCKN)
+
+            </td>
+            <td>
+                @Html.DisplayFor(mitem => item.DogumTarihi)
+
+            </td>
+        </tr>
+    }
+</table>
+

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCView", "MVCView\MVCView.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCModelPartial", "MVCModelPartial\MVCModelPartial.csproj", "{DDA99372-ED6E-4604-9E2B-0DE05792EB15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCModel", "MVCModel\MVCModel.csproj", "{2C527503-7F68-4245-A6E3-4E348842DC71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DDA99372-ED6E-4604-9E2B-0DE05792EB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDA99372-ED6E-4604-9E2B-0DE05792EB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDA99372-ED6E-4604-9E2B-0DE05792EB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C527503-7F68-4245-A6E3-4E348842DC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C527503-7F68-4245-A6E3-4E348842DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C527503-7F68-4245-A6E3-4E348842DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C527503-7F68-4245-A6E3-4E348842DC71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
