@@ -27,6 +27,25 @@ namespace MVCView.Controllers
         }
         public ActionResult Hakkimizda()
         {
+            //Controller dan Viewe veri gönderme :
+            //MVC 5 te 3 tane veri gönderme yöntemi var.ilk yöntem olarak view data dan başlayalım.
+
+            //1-ViewData[]
+            ViewData["hakkimizda1"] = "viewdata mvc1 den beri kullanılır"; //içerisine string bir deger alır. karşısında object bir deger alır.
+
+            //2-ViewBag.
+            ViewBag.hakkimizda2 = "ViewBag mvc3 ten beri kullanılır";
+
+            //3-TempData[]
+            TempData["hakkimizda3"] = "TempData mvc 3 ten beri kullanılır";//sadece tanımladıgı view de degil bir sonraki viewdede kullanılablir.
+                                                                           //return view içine redirecttoaction(iletisim) yaptıgımızda ve içerisine bu 3
+                                                                           //veri gönderme metodunu yazıdıgımızda sadece tempdata çalışır.
+                                                                           //buton ile kullanılmaz. redirecttoaction ile kullanmak zorundayız
+
+            //Şimdi Hakkimizda actiona gidip bunları nasıl çağıracagımıza bakalım.
+
+
+
             return View();
         }
         public ActionResult Iletisim()

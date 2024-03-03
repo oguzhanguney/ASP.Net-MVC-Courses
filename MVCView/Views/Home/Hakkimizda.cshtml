@@ -17,7 +17,16 @@
 
 @Html.Partial("Partial") @*partial viewinin ismini vererek kullandık.*@
 
+
+@ViewData["hakkimizda1"]
+<br />
+@ViewBag.hakkimizda2
+<br />
+@TempData["hakkimizda3"]
+<br />
+
+
 <div class="row">
-    
+
     <div class="col-md-12">@Html.Partial("../_PartialPage2")</div>
 </div>
