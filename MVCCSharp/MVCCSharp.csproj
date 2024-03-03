@@ -96,6 +96,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IsPostEgController.cs" />
+    <Compile Include="Controllers\KodlamaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -107,6 +108,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\About\Hakkimizda.cshtml" />
     <Content Include="Views\IsPostEg\Index.cshtml" />
+    <Content Include="Views\Kodlama\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

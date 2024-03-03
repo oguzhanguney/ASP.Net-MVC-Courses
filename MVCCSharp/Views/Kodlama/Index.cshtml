@@ -1,0 +1,30 @@
+﻿
+@*Bir Html kodumuzu başka bir sayafaya göndermek istedigimizde encode hali oluşturup öyle gönderip ,
+    öbür sayfada kodlanmış halini decode kullanarak çözümleriz*@
+@{
+    Layout = null;
+    string baslik1 = "<h2>Oğuzhan Güney!</h2>";
+    string kodHali = HttpUtility.HtmlEncode(baslik1);//başlık1 kod haline dönmüş oldu.
+    string yeniBaslik = HttpUtility.HtmlDecode(kodHali);//şifrelenmiş hali koyduk.
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @baslik1 @*normal hali*@
+        <br />
+        @kodHali @*Şifrelenmiş hali*@
+        <br />
+        @yeniBaslik @*decode edilmiş hali*@
+        <br />
+
+        @Html.Raw(baslik1) @*bu metot html olarak bir render sağlıyor.*@
+    </div>
+</body>
+</html>
