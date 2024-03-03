@@ -98,6 +98,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IsPostEgController.cs" />
     <Compile Include="Controllers\KodlamaController.cs" />
+    <Compile Include="Controllers\UyarıMesajController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -111,6 +112,8 @@
     <Content Include="Views\IsPostEg\Index.cshtml" />
     <Content Include="Views\Kodlama\Index.cshtml" />
     <Content Include="Views\Formatlama\Index.cshtml" />
+    <Content Include="Views\UyarıMesaj\Index.cshtml" />
+    <Content Include="Views\UyarıMesaj\Sayfa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
