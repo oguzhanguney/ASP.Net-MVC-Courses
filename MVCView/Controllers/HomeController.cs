@@ -39,5 +39,25 @@ namespace MVCView.Controllers
             //view i oluştururken ana layoutu degilde nested layoutu seçecegiz.
             return View();
         }
+
+        //Viewstart kavramı:bir layout oluşturmak istedigimizde ve boş bıraktıgımızda direk viewstarttaki layoutun layout olmasını saglayan bir kavram.
+        //örnek olarak view altına mvc5 view page ekleyelim
+        public ActionResult NewView()
+        {
+            //viewi oluştururken layout kısmını boş bıraktıgımızda viewstart kullanılacak diyor boş bırakarak ekledik.
+            return View();
+        }
+
+        //Partial View : Oluşturmamızın en önemli nedenlerinden biri, bir view oluşturuyoruz ve oluşturdugumuz bu view i başka view lerde
+        //view olarak kullanabiliyoruz,çekebiliyoruz.Buda bize oluşturdugumuz view da bir degisiklik yapmak istedigimizde başka viewlerdede 
+        //otomatik olarak degisikligin görünmesini saglıyor.
+        public ActionResult Partial()
+        {
+            //bu metotu partial yapmak için add view dedigimizde create as a partial view i seçmeliyiz.
+            return View();
+            //bu partia viewi iletisim hakkımızda ve anasayfa viewlerinde cagıralım.
+            //bir kere tanımladık birden fazla viewde kullandık ve bir kere degisiklik yapıp hepsine uyguladık.
+        }
+
     }
 }

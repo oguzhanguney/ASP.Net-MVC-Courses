@@ -153,6 +153,10 @@
     <Content Include="Views\Home\Iletisim.cshtml" />
     <Content Include="Views\Shared\_LayoutNested.cshtml" />
     <Content Include="Views\Home\Nested.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\NewView.cshtml" />
+    <Content Include="Views\Home\Partial.cshtml" />
+    <Content Include="Views\_PartialPage2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,6 +7,17 @@
 
 <h2>Hakkimizda</h2>
 
+@*section:*@
+
 @section yan {
     <p class="bg-success">Hakkımızda(section) </p>
 }
+
+@*Partial:*@
+
+@Html.Partial("Partial") @*partial viewinin ismini vererek kullandık.*@
+
+<div class="row">
+    
+    <div class="col-md-12">@Html.Partial("../_PartialPage2")</div>
+</div>

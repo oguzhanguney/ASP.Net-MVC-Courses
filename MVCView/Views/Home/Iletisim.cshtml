@@ -7,3 +7,17 @@
 
 <h2>Iletisim</h2>
 
+@*Partial:*@
+
+@Html.Partial("Partial") @*partial viewinin ismini vererek kullandık.*@
+
+<div class="row">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">@Html.Partial("../_PartialPage2")</div>
+    @*şimdi burada iletişim sayfasındayız bu view views içinde home klasörünün içinde fakat biz view klasörü altındaki partialpage2 
+        ulaşmak istiyoruz.bunun için -> ../ ile önce home içerisinden view e çıktı ve içersinden partialpage2 yi buldu
+        iletişim sayfasında bunu sağ tarafta kullandık.hakkımızda içinde footer şeklinde kullanalım*@
+    
+
+</div>
+
