@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Listele</h2>
+
+@* Bir buton koyalım.butona tıklandıgında verilerimiz dolsun.*@
+
+@Html.ActionLink("Doldur","Doldur")
+
+@Html.Partial("../_PartialPage1",(List<int>)ViewBag.Degerler)
+
