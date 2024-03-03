@@ -1,0 +1,31 @@
+﻿@*Nested Layout: Bir web sayfasında ana layoutumuz olsun .birde sayfa içerisinde bölümler olsun her sayfada sabit olan.
+    Bu bölümleri nested layout ,iç içe layout ile oluşturuyoruz.Yani layouttan miras almış oluyoruz.*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            @Html.ActionLink("Anasayfa", "Anasayfa", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Hakkımızda", "Hakkimizda", "Home", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("İletişim", "Iletisim", "Home", null, new { @class = "btn btn-primary" })
+            <p>Oğuzhan Güney!</p> @*tüm sayfalarda güncellendi.*@
+
+
+        </div>
+        <div>
+            @RenderBody()  @*Layout sayfasını kullanacak viewlerin geleceği yer.*@
+
+            @*Bootstrap frameworku kullanmak için projemize eklememiz gerek.projeye tıklayarak manage nuget packets*@
+        </div>
+
+    </div>
+
+</body>
+</html>

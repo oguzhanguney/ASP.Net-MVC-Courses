@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "_LayoutNested";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@*Oluşan sayfayı 2 parçaya ayırmak istiyoruz.sol taraf sabit alanlar(nestedlayout kısmı),sağ taraf içerisine girecek olan kısımlar değişen olanlar olsun. *@
+
+
+<div class="row">
+    <div class="col-md-4">
+        @*sabit degerler ekleyelim  ul li yapısı*@
+        @*Bu kısım bizim nested layoutumuzdaki sabit alan oldu.istedigimiz gibi degistirebiliriz.*@
+        <ul>
+            <li>
+                Birinci Link
+            </li>
+            <li>
+                İkinci Link
+            </li>
+            <li>
+                Üçüncü Link
+            </li>
+        </ul>
+        @*Section Kavramı:Bir layout içerisinde tek bir bölümün degismesini istiyorsak renderbody ile yapıyorduk
+            ama bir bölüm  degilde birden fazla bölümün degismesini istiyorsak section metotlarını kullanırız*@
+        @RenderSection("Yan",false) @*bu sectionu anasayfa hakkımızda ve iletişimde kullanmak istedigimde örnegin anasayfaya giderek tanımlarız.
+                                  Birden fazla section tanımlaması yapabiliriz.(iletişim sayfasında hata verecek tanımlı degil.)
+                                  Tanımlamak istemedigimiz sayfalarda metoda ikince parametre olarak zorunlu olup
+                                  olmadıgını gönderiyoruz.false yaparsak zorunlu olmaz*@
+        
+    </div>
+    <div class="col-md-8">
+        @*Bu kısım ise alacağı olan view i çekecegimiz yer.*@
+        @RenderBody()
+
+    </div>
+</div>
