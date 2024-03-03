@@ -1,0 +1,52 @@
+﻿@*String formatlama:Bazı durumlarda bir tarih degerini veya sayı degerini string degere formatalamak isteriz .*@
+@{
+    Layout = null;
+
+    DateTime tarih = new DateTime(1990,12,28,5,45,32);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*TARİH FORMATLAMA*@
+        @("dd :" + string.Format("{0:dd}",tarih)) @*günü formatlamış olduk.*@
+        <br />
+        @("dddd :" + string.Format("{0:dddd}",tarih)) @*günü formatlamış olduk.*@
+        <br />
+        @("M :" + string.Format("{0:M}",tarih)) @*ayı formatlamış olduk.*@
+        <br />
+        @("MM :" + string.Format("{0:MM}",tarih)) @*ayı formatlamış olduk.*@
+        <br />
+        @("MMMM :" + string.Format("{0:MMMM}",tarih)) @*ayı formatlamış olduk.*@
+        <br />
+        @("yyyy :" + string.Format("{0:yyyy}",tarih)) @*yılı formatlamış olduk.*@
+        <br />
+        @("yy :" + string.Format("{0:yy}",tarih)) @*yılı formatlamış olduk.*@
+        <br />
+        @("y :" + string.Format("{0:y}",tarih)) @*yılı formatlamış olduk.*@
+
+        <hr />
+        @*SAYI FORMATLAMA*@
+        @*öteleme işlemleri harften sonra kaç karakterli olmasını istiyorsak sayıyı yazabilir ÖR: D5
+            Ondalıklı sayılarda ise virgülden sonraki kısmı belirtiriz.*@
+        @(" C:" + string.Format("{0:C}",15.66)) @*Bilgisayardaki para degeri: 15.66t*@
+        <br />
+        @(" D:" + string.Format("{0:D}",15)) @*Decimal sayıların gösterimi:*@
+        <br />
+        @(" F:" + string.Format("{0:F}",15.66)) @*Float sayıların gösterimi:*@
+        <br />
+        @(" E:" + string.Format("{0:E}",15.66)) @*Sayının bilimsel olarak gösterimi:*@
+
+
+
+
+
+    </div>
+</body>
+</html>
