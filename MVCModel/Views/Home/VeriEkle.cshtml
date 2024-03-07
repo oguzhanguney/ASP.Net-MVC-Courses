@@ -1,0 +1,82 @@
+﻿@*Modelimizi ekliyoruz.*@
+
+@model MVCModel.Models.Personel
+
+@{
+    ViewBag.Title = "VeriEkle";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*Html etiketleri post işlemi yapacagı zaman form etiketleri içerisinde kullanılır.
+    Burada yeni bir personel ekleyecegimiz için sayfamızı controller a post etmemiz lazım.*@
+
+@* using kullanmasakta olurdu fakat using kullandıgımızda süslü parantezler arasında işlemi yap,sonra kendini yok et.(performans)*@
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken() @* bu metot cross-side saldırılarını önler.*@
+<div class="form-horizontal">
+    <h2>Personel Ekle</h2>
+
+    @Html.ValidationSummary(true) @*textboxa validation kontrol koyduysak,yazdıgımız deger kontrole uymuyorsa hata mesajını yazdıracagız.*@
+
+    @*sayfanın sol tarafına label ile hangi özelligi eklemek istiyorsak onun adını,sag tarafına ise textbox ile içine yazacagımız veriyi yazdırmak istiyorum.*@
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Id)
+            @Html.ValidationMessageFor(m => m.Id)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Ad, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Ad)
+            @Html.ValidationMessageFor(m => m.Ad)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Soyad, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.Soyad)
+            @Html.ValidationMessageFor(m => m.Soyad)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.TCKN, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.TCKN)
+            @Html.ValidationMessageFor(m => m.TCKN)
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.DogumTarihi, new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+            @Html.EditorFor(m => m.DogumTarihi)
+            @Html.ValidationMessageFor(m => m.DogumTarihi)
+        </div>
+    </div>
+
+    <div class="form-group col-md-offset-2 col-md-10">  @*kaydetme işlemini yapacaak olan buton:*@
+        
+        <input type="submit" value="Kaydet" class="btn btn-success" />
+    </div>
+
+
+</div>
+}
+@*Kaydetme işlemini yapmadıysa geri listeleme işlemine dönsün:*@
+
+@Html.ActionLink("Personel Listesine Dön","Listele")
+
+@*Butona tıklandıgı zaman tekrar controller a gelecek o yüzden -> controller *@

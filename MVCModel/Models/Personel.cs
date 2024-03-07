@@ -15,6 +15,7 @@ namespace MVCModel.Models
         public string Soyad { get; set; }
         public double TCKN { get; set; }
         public DateTime DogumTarihi { get; set; }
+        public string Islem { get; set; }
 
     }
 }

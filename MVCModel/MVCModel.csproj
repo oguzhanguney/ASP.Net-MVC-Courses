@@ -150,6 +150,8 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\Home\Listele.cshtml" />
+    <Content Include="Views\Home\VeriEkle.cshtml" />
+    <Content Include="Views\Home\VeriDuzenle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
