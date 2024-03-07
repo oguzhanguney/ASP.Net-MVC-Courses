@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAttribute", "MVCAttribut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCModelBinder", "MVCModelBinder\MVCModelBinder.csproj", "{3E12ACDF-9FF1-4F51-A442-3BE8CE25C3F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCEntityFramework", "MVCEntityFramework\MVCEntityFramework.csproj", "{7D2113E0-44EE-43EB-BEE8-5DEC7E6F977E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{3E12ACDF-9FF1-4F51-A442-3BE8CE25C3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E12ACDF-9FF1-4F51-A442-3BE8CE25C3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E12ACDF-9FF1-4F51-A442-3BE8CE25C3F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2113E0-44EE-43EB-BEE8-5DEC7E6F977E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2113E0-44EE-43EB-BEE8-5DEC7E6F977E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2113E0-44EE-43EB-BEE8-5DEC7E6F977E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2113E0-44EE-43EB-BEE8-5DEC7E6F977E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

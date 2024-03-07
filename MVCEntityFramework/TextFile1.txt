@@ -1,0 +1,36 @@
+﻿Bu bölümde EntityFramework ile veritabanı oluşturma yöntemlerinden olan codefirst'ü görecegiz.
+codefirst yöntemi adındanda anlaşılacagı gibi önce kodun yazılması sonra veritabanının oluşturması demektir.
+biz bu örnek için 2 tane tablo oluşturalım.
+1.ürünlerin tutulduğu class
+2.bu ürünlerin kategorilerinin tutuldugu class 
+
+Yapmamız gerekenler:
+-Models>Add>class>Kategori
+
+-Models>Add>class>Urun
+
+-Veritabanı modellerimizi oluşturdugumuza göre sıra geldi veritabanı ile modellerimizi iletişim haline geçirecek bir class oluşturmaya .
+Entityframework ile veritabanı işlemlerini yönetecek merkezi bir sınıf oluşması gerekir.Bu sınıf sayesinde oluşturulan veri modelleri üzerinden veri
+tabanı işelmeri gerçekleştirilir.
+-Yani biz merkezi bir sınıf oluşturmalıyız.Bu sınıfımızıda  "DbContext" classından miras alarak oluşturuyoruz.
+-"DbContext" class ını projeye dahil etmek için EntityFramework dll 'lerinin projemize yüklememiz gerekir.
+-projeye bir klasör açalım.(DAL)
+-bu klasörün içine bir "SatisContext" adında bir sınıf ekleyelim.
+-SatisContext bu classı oluşturduktan sonra DbContext classından miras almalıyız.
+-"DbContext" in çalışması içinde promize entityframework dll lerini yüklemeliyiz. proje>nuget packet>browse>entityframework
+-dll leri yükledikten sonra SatisContext içinde DbContext>ctrl.>using system data entity  classa dahil ettik.
+-Böylelikle DbContext ten merkezi classına miras almış olduk.
+-Öncelikle yapacagımız işlem SatisContext sınıfının constructor ını oluşturmak olacak.(connectionstring oluştururken maini belirtmemizi saglar.)
+-Constructor oluşturduktan sonra entityframework ile veritabanındaki verilere DbSet üzerinden erişilmekte ve işlemler yapılmaktadır.
+using MVCEntityFramework.Models;
+-DbSet oluşturalım ve model klasörünüde clasımıza ekleyelim.(using MVCEntityFramework.Models;)
+
+-Bu adımlardan sonra web.config den connectionString ayarlarını yapmaya geldi.
+-<connectionStrings> tagini açtıktan sonra connectionString için 3 özellik var.Eğer veritabanına windows authontication ile bağlanacaksak,eğer kullanıcı adı
+ve parola ile baglanacaksak onn içinde kullanıcı adı ve parolayı girmemiz lazım.
+-Öncelikle DataSource dediğimiz data kaynagını oluşturmalıyız.Sonra initial catalog diyerek veritabının ismini oluşturmalıyız.en son olarak windows autho olarak
+baglandıgımız içinde integrated security i true yapmalıyız.
+
+-Bu işlemden sonra bir controller oluşturalım ve bu veritabanını oluşturalım veritabanımızda.(controller:MVC 5 Controller with views,using entity framework)
+-şimdi index viewe gidelim ve çalıştıralım biraz zaman alacak çünkü veritabanıda oluşturuluyor. create newe tıklayalım.
+-bilgisayar diye ad oluşturduk ve db den kontrol edelim.
