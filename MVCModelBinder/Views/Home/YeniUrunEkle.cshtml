@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "YeniUrunEkle";
+}
+
+<h2>YeniUrunEkle</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    //sayfa kaydet butonuna tıklandıktan sonra post olacak controller a gelecek.controllerda httppost ile yakalamamız lazım.
+    <div class="form-horizontal">
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                Ürün Adı:
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="urunAd" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+}
+
