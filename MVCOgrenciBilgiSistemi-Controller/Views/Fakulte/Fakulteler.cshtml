@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Fakulteler";
+}
+
+<h2>Fakulteler</h2>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btnBolumler').click(function () {
+            var fakulteId = document.getElementsByName("fakulteler")[0].value;
+            $('#bolumler').load("../Bolum/FakultedekiBolumler/" + fakulteId);//partial viewi yakalama işlemi:
+        });
+    });
+</script>
+
+<div>
+    @Html.DropDownList("fakulteler",(List<SelectListItem>)ViewBag.Fakulteler)@*dropdown list oluşturmuş olduk.*@
+    <input type="button"  value="Bölümler" id="btnBolumler" />
+</div>
+<hr />
+
+<div id="bolumler"> @*böylelikle dropdown listten fakulte secip butona tıklandıgında  bu div içine partial view i yükleme işlemi yapacagız.jquery ile yapacagız.*@
+
+</div>

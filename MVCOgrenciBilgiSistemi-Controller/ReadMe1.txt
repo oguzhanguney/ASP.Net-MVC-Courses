@@ -38,3 +38,26 @@ DbContext ten miras alan bir context sınıfı oluşturmalıyız.projeye "DAL" a
             return Redirect("https://www.youtube.com/channel/UCabuPeggpkGAuoPB74jfogg");
         })
         --gerekli işlemleri yaptıktan sonra ekle viewi çalıştıralım.
+
+
+
+--Enable Migration(partial view döndürme): senaryomuz biz bir sayfada dropdown list oluşturalım ve dropdown list elemanlarını fakulteler isminden alalım sonra bir fakulteyi seçip butona tıkladıgımızda
+--partial viewde olan bu fakulteye ait bölümleri getirelim.bunu yapmak için veritabanımızda bölümler tablosuna ihtiyacımız var.bunuda code first yardımı ile yaparken model klasörü altında bir class ekleyelim
+--Bolum class ını oluşturalım .(bolum.cs)
+--bolumu oluşturduktan sonra yapmamız gereken databasecontext imizde gidip datasetimizi oluşturmak.
+--veritabanı ile ilişkilendirmeyi yapmak için migration özelligini açmamız gerekiyor.(view/other windows/package manager console
+--enable-migrations yazalım.bu database ile modeli birleştiren özelliktir.yani kod olarak yazdıgımızı database olarak bize açıyor.
+--bu işlemden sonra tekrar package manager i açalım ve update-database yazalım. böylelikle yazdıgımız kodlar sonucunda veritabanımızı güncelledik .
+
+
+--Partial view Result:ornegimizi daha düzgün görmek için bölüm tablosuna ms sql den veri ekleyelim.
+--bölümleri ekledigimize göre partial view i oluşturalım.önce bölümler diye controller ekleyelim.
+
+--partial view döndürme işlemleriyle devam edelim.şimdi bir dropdown list tanımlayalım fakulte alsın ,fakulteye tıklandıktan sonra jquery ile bu partialview i oraya cagıralım.
+--önce fakulte controllera gidelim
+
+
+--şimdi javascript result türünde metot oluşturalım ve bu metodu başka bir viewda kullanalım.öncelikle bir tane text controller oluşturalım
+
+
+--model ve action attributlerine başlıyoruz burada action name i görelim fakulte controller a gidelim

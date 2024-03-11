@@ -123,12 +123,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BolumController.cs" />
     <Compile Include="Controllers\DosyalarController.cs" />
     <Compile Include="Controllers\FakulteController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="DAL\OBSContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403091142037_InitialCreate.cs" />
+    <Compile Include="Migrations\202403091142037_InitialCreate.Designer.cs">
+      <DependentUpon>202403091142037_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Bolum.cs" />
     <Compile Include="Models\Fakulte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -143,6 +151,11 @@
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Views\Dosyalar\Index.cshtml" />
+    <Content Include="Views\Bolum\FakultedekiBolumler.cshtml" />
+    <Content Include="Views\Fakulte\Fakulteler.cshtml" />
+    <Content Include="Views\Test\TestJS.cshtml" />
+    <Content Include="Views\Fakulte\TumFakulteler.cshtml" />
+    <Content Include="Views\Fakulte\Fakulte.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,6 +166,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202403091142037_InitialCreate.resx">
+      <DependentUpon>202403091142037_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

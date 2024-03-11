@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "TestJS";
+}
+
+<h2>TestJS</h2>
+
+@*Burada yapacagımız işlem bir buton ayarlayıp butona tıklandıgında javascript result dönen metedun içerisindeki scripti bir dive basalım.  *@
+@*işlemi gerçekleştirmek için jquery ajax kullanacagız.*@
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#btnMesajGoster').click(function () {
+            $.ajax({
+                type: "POST",
+                url: "MesajGoster",
+                contentType: "application/text; charset=utf-8",
+                dataType: "text",
+                success: function (msg) {
+                    $('#jsKodlari').append("<script type=\"text/javascript\">" + msg + "<\/script>");
+                }
+            })
+            return false;
+        });
+    });
+</script>
+
+
+<input type="button" value="Mesaj Göster" id="btnMesajGoster" />
+
+<div id="jsKodlari"></div>

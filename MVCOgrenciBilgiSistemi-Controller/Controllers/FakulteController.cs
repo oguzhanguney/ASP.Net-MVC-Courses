@@ -51,5 +51,38 @@ namespace MVCOgrenciBilgiSistemi_Controller.Controllers
         {
             return View();
         }
+
+        //partial view result lesson :dropdown list
+        public ActionResult Fakulteler()
+        {
+            //bu action result bize bir dropdown list dönmesi için viewbag imizde fakulteleri tutacak bir dropdown list elemanı olması lazım :
+            var fakulteler=veritabani.Fakulteler.ToList().Select(f=>new SelectListItem
+            {
+                Selected=false,
+                Text=f.FakulteAd,
+                Value=f.Id.ToString()
+            }).ToList();
+            ViewBag.Fakulteler= fakulteler;
+            return View();
+            //view ekleyelim.
+        }
+
+
+        //actionname: action metodununun oluşturuldugundan farklı bir isimde çağrılması gerektıgı durumlarda bu attribute ile action metodu parametrede tanımlanan isimle çağrılabilir
+        //yani birden fazla aynı isimli ve farklı parametrelere sahip action varsa bu actionları actionname ile farklı isimlendirme yapabiliriz.
+        //tüm fakultelerin detayını bir action da , fakulte ıd sine göre fakulte detayını farklı bir actionda tanımlayacagızz.
+        //
+        [ActionName("TumFakulteler")]
+        public ActionResult Detay()
+        {
+            return View();
+        }
+        [ActionName("Fakulte")]
+        public ActionResult Detay(int id)
+        {
+            ViewBag.FakulteId=id;
+            return View();
+        }
+
     }
 }

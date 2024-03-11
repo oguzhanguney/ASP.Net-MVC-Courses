@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MVCOgrenciBilgiSistemi_Controller.Models.Bolum>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fakulte.FakulteAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in (IEnumerable<MVCOgrenciBilgiSistemi_Controller.Models.Bolum>)ViewBag.Bolumler)//modelimiz olmadıgı için hata verdi. Model yerine (IEnumerable<MVCOgrenciBilgiSistemi_Controller.Models.Bolum>)Viewbag.Bolumler
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fakulte.FakulteAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+ 
+    </tr>
+}
+
+</table>
