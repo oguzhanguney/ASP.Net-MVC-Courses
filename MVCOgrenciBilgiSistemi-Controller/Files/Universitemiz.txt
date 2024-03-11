@@ -1,0 +1,2 @@
+﻿FileResult deneme .
+this is text file.

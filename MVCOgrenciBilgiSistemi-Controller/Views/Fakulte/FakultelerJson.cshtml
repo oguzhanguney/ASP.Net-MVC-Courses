@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "FakultelerJson";
+}
+
+<h2>FakultelerJson</h2>
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#fakultelerGetir").click(function(){
+            $.ajax({
+                type: "POST",
+                url: "Listele",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (msg) {
+                    alert(msg);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+<input type="button"  value="Tıkla" id="fakultelerGetir" />

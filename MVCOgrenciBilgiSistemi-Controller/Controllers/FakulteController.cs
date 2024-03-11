@@ -36,5 +36,19 @@ namespace MVCOgrenciBilgiSistemi_Controller.Controllers
             veritabani.SaveChanges();
             return Redirect("https://www.youtube.com/channel/UCabuPeggpkGAuoPB74jfogg");
         }
+
+        //Json Result:
+        //butona tıklandıgında  verilerimin jsona dönmesini  istiyorum.jquery ajax oluşturulmuş bir buton:(post)
+        [HttpPost]
+        public JsonResult Listele()
+        {
+            var fakulteler=veritabani.Fakulteler.ToList();
+            return Json(fakulteler);
+        }
+        //şimdi bir butona tıklandıktan sonra jquery ajax ile işlemleri yapacagımız view için action oluşturalım.
+        public ActionResult FakultelerJson()
+        {
+            return View();
+        }
     }
 }

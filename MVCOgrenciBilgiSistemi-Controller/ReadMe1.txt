@@ -18,3 +18,13 @@ DbContext ten miras alan bir context sınıfı oluşturmalıyız.projeye "DAL" a
 -daha sonra indexten bir view oluşturalım (boş ve layoutsuz)
 
 -şimdi action türlerine bakacagız.(->fakultecontroller)
+
+--Json result:burada json türünde bir veri gönderme veri gösterme işlemi yapacagız.öncelikli olarak json verilerini göndermek için json result türünde metot oluşturalım.ve json işlemi yapalım.(fakulte controller)
+
+--Şimdi file result işlemlerini görecegiz.files adında bir klasör açalım ve içine bir txt atalım
+--file result dönüş tipi yapıldıgı zaman returnununde filepathresult olması lazım.bu bizim serverimizdaki dosyayı indirmemize yada göstermemize yarayan dönüş tipi olacak.
+--öncelikle boş bir controller oluşturalım (dosyalar controller)
+
+--şimdi FileStreamResult :serverda var olmayan dosyayı biz oluşturup biz geri dönderecegiz.(dosya controller)
+
+--Redirect to Route Result:bu metot farklı bir action metoda yönlendirme işlemi yapar.redirect metodunda içine aldıgı url ye yönlendiriyordu şimdi farklı bir action metoduna yönlendirme yapalım
