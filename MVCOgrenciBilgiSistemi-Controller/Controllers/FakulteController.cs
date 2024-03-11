@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace MVCOgrenciBilgiSistemi_Controller.Controllers
 {
@@ -29,12 +30,12 @@ namespace MVCOgrenciBilgiSistemi_Controller.Controllers
         }
         //Model döndüreceginden dolayı redirecttoactıon:
         [HttpPost]
-        public RedirectResult Ekle(Fakulte kayit)
+        public RedirectToRouteResult Ekle(Fakulte kayit)
         {
             //kaydı veritabanına eklememiz lazım bunun içinde:
             veritabani.Fakulteler.Add(kayit);
             veritabani.SaveChanges();
-            return Redirect("https://www.youtube.com/channel/UCabuPeggpkGAuoPB74jfogg");
+            return new RedirectToRouteResult(new RouteValueDictionary(new {Action="Ekle", controller="Fakulte"}));
         }
 
         //Json Result:

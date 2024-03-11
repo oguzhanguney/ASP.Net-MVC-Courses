@@ -28,3 +28,13 @@ DbContext ten miras alan bir context sınıfı oluşturmalıyız.projeye "DAL" a
 --şimdi FileStreamResult :serverda var olmayan dosyayı biz oluşturup biz geri dönderecegiz.(dosya controller)
 
 --Redirect to Route Result:bu metot farklı bir action metoda yönlendirme işlemi yapar.redirect metodunda içine aldıgı url ye yönlendiriyordu şimdi farklı bir action metoduna yönlendirme yapalım
+--http post ekle metodunun üzerinde degisiklik yaparak ilerleyelim (fakulte controller) 
+--Ekle metodu eski hali (
+        public RedirectResult Ekle(Fakulte kayit)
+        {
+            //kaydı veritabanına eklememiz lazım bunun içinde:
+            veritabani.Fakulteler.Add(kayit);
+            veritabani.SaveChanges();
+            return Redirect("https://www.youtube.com/channel/UCabuPeggpkGAuoPB74jfogg");
+        })
+        --gerekli işlemleri yaptıktan sonra ekle viewi çalıştıralım.
