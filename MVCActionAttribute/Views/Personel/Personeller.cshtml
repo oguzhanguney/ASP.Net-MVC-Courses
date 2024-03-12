@@ -1,0 +1,49 @@
+﻿@model IEnumerable<MVCActionAttribute.Models.Personel>
+
+@{
+    ViewBag.Title = "Personeller";
+}
+
+<h2>Personeller</h2>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCKN)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        using (Html.BeginForm("Sil", "Personel", new { id = item.Id }, FormMethod.Post))
+        {       @*bundan sonra personel controller içinde sil action unu tanımlayalım.*@
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TCKN)
+            </td>
+            @*silme işlwmi yapacagımız için her bir dönen foreach içerisinde bir başka sütünda sil butonuna ihtiyacımız var.*@
+            <td>
+                <input type="submit" value="Sil" />@*bu işlemi form içerisine alıp öbür sayfaya göndermemiz gerek onn için beginform*@
+            </td>
+        </tr>
+        }
+
+    }
+
+</table>

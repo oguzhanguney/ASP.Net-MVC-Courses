@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MVCActionAttribute.Models.Personel>
+
+@{
+    ViewBag.Title = "PersonelAramaSonucu";
+}
+
+<h2>PersonelAramaSonucu</h2>
+
+<p>
+    Aranan Kelime:@ViewBag.ArananKelime
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Soyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TCKN)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Soyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TCKN)
+        </td>
+
+    </tr>
+}
+
+</table>
