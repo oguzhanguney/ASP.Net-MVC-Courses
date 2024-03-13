@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCActionAttribute", "MVCAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCAsenkron", "MVCAsenkron\MVCAsenkron.csproj", "{AB1AE9AB-61D6-434C-A342-3C561B666869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Grid", "MVC.Grid\MVC.Grid.csproj", "{12274B83-E5F0-4584-8CAF-265148AF5185}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{AB1AE9AB-61D6-434C-A342-3C561B666869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB1AE9AB-61D6-434C-A342-3C561B666869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB1AE9AB-61D6-434C-A342-3C561B666869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12274B83-E5F0-4584-8CAF-265148AF5185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12274B83-E5F0-4584-8CAF-265148AF5185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12274B83-E5F0-4584-8CAF-265148AF5185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12274B83-E5F0-4584-8CAF-265148AF5185}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

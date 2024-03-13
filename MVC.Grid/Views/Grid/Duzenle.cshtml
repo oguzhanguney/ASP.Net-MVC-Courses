@@ -1,0 +1,37 @@
+﻿@model MVC.Grid.Models.Personel
+@{
+    ViewBag.Title = "Duzenle";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Duzenle</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="input-group">
+        <span class="input-group-addon" id="txt_ad"><i class="glyphicon glyphicon-user"></i></span>
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control", placeholder = "Adını Giriniz", aria_describedby = "txt_ad" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txt_soyad"><i class="glyphicon glyphicon-user"></i></span>
+        @Html.TextBoxFor(m => m.Soyad, new { @class = "form-control", placeholder = "Soyadını Giriniz", aria_describedby = "txt_soyad" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txt_yas"><i class="glyphicon glyphicon-time"></i></span>
+        @Html.TextBoxFor(m => m.Yas, new { @class = "form-control", placeholder = "Yaşı Giriniz", aria_describedby = "txt_yas" })
+    </div>
+    <br />
+    <div class="input-group">
+        <span class="input-group-addon" id="txt_ulke"><i class="glyphicon glyphicon-globe"></i></span>
+        @Html.DropDownListFor(m => m.Ulke.Id, (List<SelectListItem>)ViewBag.Ulkeler, new { @class = "form-control", aria_describedby = "txt_ulke" })
+    </div>
+    <br />
+
+    <input type="submit" class="btn btn-success" value="Kaydet" />
+
+    //hangi personeli değiştirecegimizi anlamak için:
+    @Html.HiddenFor(m=>m.Id)
+}
+
