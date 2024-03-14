@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "UrunGetir";
+}
+
+<h2>UrunGetir</h2>
+
+Ürün ID:<input type="text" id="urunId"/>
+
+<br />
+<input type="button" id="urunGetir" value="Ürün Getir" />
+
+<br />
+
+<div id="urun"></div>
+
+<script>
+    $(document).ready(function () {
+
+        $('#urunGetir').click(function () {
+
+            //burada ürün id yi yakalamak zorundayız. text box adı urunId idi o yüzden #urunId
+
+            var urunId = $('#urunId').val();
+
+            $.getJSON('../api/urun/' + urunId).done(function (urun) {
+
+                var urunBilgisi = urun.Ad + " Fiyatı: " + urun.Fiyat + "TL - Stok Miktarı: " + urun.StokMiktari;
+
+                $('#urun').html(urunBilgisi);
+
+            }).fail(function (xhr, textStatus, errorThrown) {
+                if (xhr.status == 404) {
+                    alert("Ürün Bulunamadı");
+                } else if (xhr.status == 401 || xhr.status == 403) {
+                    alert("Bu işlem için yetkiniz bulunmamaktadır.");
+                } else {
+                    alert("Bir hata oluştu: " + errorThrown);
+                }
+            });
+
+        });
+
+    });
+</script>
+

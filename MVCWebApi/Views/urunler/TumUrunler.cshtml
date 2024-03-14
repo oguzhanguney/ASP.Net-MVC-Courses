@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "TumUrunler";
+}
+
+<h2>TumUrunler</h2>
+
+@*buraya bir buton ekleyelim.buton tıklandıgı zaman apiye gidip ürünleri alıp getirip yazacak.*@
+
+<input type="button" id="urunleriListele" value="Ürünleri Getir"/>
+
+<div id="urunler"></div>
+
+<script>
+    $(document).ready(function () {
+        $('#urunleriListele').click(function () {
+
+            $.getJSON('../api/urun').done(function (veri) {
+
+                var urunler = "";
+                $.each(veri, function (key, urun) {
+
+                    urunler += urun.Ad + " Fiyatı: " + urun.Fiyat + "TL - Stok Miktarı: " + urun.StokMiktari + "<br/>";
+
+                });
+
+                $('#urunler').html(urunler);
+
+            });
+
+        });
+
+    });
+</script>
+
