@@ -124,9 +124,9 @@
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\HaberKategori\Anasayfa.cshtml" />
     <Content Include="Views\Haber\Detay.cshtml" />
     <Content Include="Views\Site\ArsivTarih.cshtml" />
+    <Content Include="Views\HaberKategori\Anasayfaa.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

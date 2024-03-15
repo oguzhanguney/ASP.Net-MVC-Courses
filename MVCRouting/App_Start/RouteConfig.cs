@@ -85,8 +85,8 @@ namespace MVCRouting
             //Kullanıcı Tanımlı Route kısıtlaması:
             routes.MapRoute(
                 name: "Kategori",
-                url: "kategori/{kategori}",
-                defaults: new { controller = "HaberKategori", action = "Anasayfa" },
+                url: "kategoriler/{kategori}",
+                defaults: new { controller = "HaberKategori", action = "Anasayfaa" },
                 constraints: new { kategori=new KategoriRouteConstraints() } 
             );
 

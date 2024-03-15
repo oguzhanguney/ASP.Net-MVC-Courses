@@ -9,10 +9,9 @@ namespace MVCRouting.Controllers
     public class HaberKategoriController : Controller
     {
         // GET: HaberKategori
-        public ActionResult Anasayfa()
+        public ActionResult Anasayfaa(string kategori)
         {
-            int routeSirasi = this.RouteData.Values.Count - 3;
-            string kategori = this.RouteData.Values["kategori" + routeSirasi].ToString();
+            
 
             ViewBag.KategoriAd = kategori;
             return View();
