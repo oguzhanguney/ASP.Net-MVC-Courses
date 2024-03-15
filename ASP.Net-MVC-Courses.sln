@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.Grid", "MVC.Grid\MVC.Gr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWebApi", "MVCWebApi\MVCWebApi.csproj", "{6DBCA537-2CCD-4E1A-8316-0E0935C4CEA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCRouting", "MVCRouting\MVCRouting.csproj", "{EEEF73F0-30C5-4F61-A3AB-A87369762220}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{6DBCA537-2CCD-4E1A-8316-0E0935C4CEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBCA537-2CCD-4E1A-8316-0E0935C4CEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DBCA537-2CCD-4E1A-8316-0E0935C4CEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEF73F0-30C5-4F61-A3AB-A87369762220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEF73F0-30C5-4F61-A3AB-A87369762220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEF73F0-30C5-4F61-A3AB-A87369762220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEF73F0-30C5-4F61-A3AB-A87369762220}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
