@@ -1,0 +1,17 @@
+﻿
+@model System.Web.Mvc.HandleErrorInfo
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>Error.</h1>
+        <h2>Controller Name: @Model.ControllerName - Action Name: @Model.ActionName</h2>
+        <h3>Hata:@Model.Exception.Message</h3>
+    </hgroup>
+</body>
+</html>
