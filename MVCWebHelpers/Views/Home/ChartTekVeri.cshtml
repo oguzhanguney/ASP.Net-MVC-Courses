@@ -1,0 +1,45 @@
+﻿
+@using System.Web.Helpers
+
+
+<h2>ChartTekVeri</h2>
+
+@* Chart sınıfından yeni bir nesne üretelim. *@
+
+@* AddSeries metodu içerisinde charttype propertisi ile chartların tipini değiştirebiliriz.(Point,Buble,Line,Spline,Column,Bar,Area,SplineArea,Pie,Doughnut) *@
+@{
+    var grafik = new Chart(width: 500, height: 500);
+
+    grafik.AddTitle(text: "1.Sınıflar Bahar Dönemi Not Ortalamaları");
+
+    grafik.AddLegend(title: "Veriler");
+
+    grafik.AddSeries(
+        name: "Proje notları",
+        xValue: new[] { "BM101", "BM102", "BM103" },
+        yValues: new[] { 65, 35, 55 }
+        );
+
+    grafik.AddSeries(
+        name: "ortalamalar",
+        chartType: "Point",
+        xValue: new[] { "BM101", "BM102", "BM103" },
+        yValues: new[] { 80, 50, 90 }
+        );
+
+    grafik.AddSeries(
+        name: "standart sapma",
+        chartType: "Bubble",
+        xValue: new[] { "BM101", "BM102", "BM103" },
+        yValues: new[] { 40, 10, 70 }
+        );
+
+    grafik.AddSeries(
+        name: "sapma",
+        chartType: "Line",
+        xValue: new[] { "BM101", "BM102", "BM103" },
+        yValues: new[] { 20, 10, 30 }
+        );
+
+    grafik.Write(format: "png"); //write metodu içerisine istedigimiz formatta ayarlama yapabiliriz.
+}
