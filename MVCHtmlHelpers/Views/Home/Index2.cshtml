@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Index2";
+}
+
+<h2>Index2</h2>
+@* HTML HELPERS *@
+
+@* 1)Html.BeginForm : form etiketlerinin yerine kullanılır. *@
+
+@* 2)Html.ActionLink metodu: bir link oluşturma metodur.html deki a tagine karşılık gelir. *@
+
+@* 3)Html.Label metodu: html deki label a karşılık gelir. *@
+
+@* 4)Html.Textbox metodu: bir input değeri sağlar. *@
+
+@* 5)Html.TextArea metodu: textbox gibidir birden fazla satırda işlem gerçekleştiririz. *@
+
+@* 6)Html.DropdownList metodu :html de kullanıcının bir listede bulunan seçeneklerden sadece birini seçmesine olanak sağlayan kontrole denir.Ve elemanları görüntülemek için select etiketi kullanılır.  *@
+
+@* 7)Html.ListBox: html de kullanıcının bir listede bulunan seçeneklerden bir yada birden fazlasını seçmesini sağlayan metotdur. *@
+
+@* 8)Html.Password: parola yazma işlemlerinde kullanırız. *@
+
+@* 9)Html.Hidden : ekranda gözükmeyen ama birşeyleri biryere taşırken geçici eleman olarak kullandıgımız yada göstermek istemediğimiz ama tutmak istediğimiz elemanlar için kullanırız. 
+                    nerede kullanırız: bir güncelleme işlemi zamanında  güncellenecek şeyi eğer postback yapıyorsak onu hiddenda tutabiliriz.hidden ile birlikte tekrar kullanacagımızda 
+                    hidden in value sunu alıp kullanabiliyoruz.*@
+
+@* HTML STRONGLY TYPE HELPER(türü belli olan anlamındadır.C# türü belli olan bir yazılım dilidir.)
+        -helper metotlarının sonuna for gelerek oluşturulur ve içersine landa alır .
+        -örnek: @Html.LabelFor(m=>m.Ad) yani burada modeldeki ad özelligini labela çağırdık.otomatik güncelleme ve çekme işlemi yapabiliriz.*@
+
+@* html yazılış. *@
+html biçimi:<select>
+    <option>İlk</option>
+    <option>İkinci</option>
+
+</select>
+<hr />
+@* şimdi helper kullanarak dropdownlist gösterelim. *@
+html helper dropdownlist:
+@Html.DropDownList("meslek",
+    new[]
+    {
+        new SelectListItem
+        {
+            Text="işçi",
+            Value="1"
+        },
+        new SelectListItem
+        {
+            Text="memur",
+            Value="2"
+        }
+
+    }, "Bir seçim yapınız")
+<br />
+
+@* şimdi helper kullanarak Listbox oluşturalım. *@
+Html helper Listbox:
+@Html.ListBox("oda sayıları",
+    new[]
+    {
+        new SelectListItem
+        {
+            Text="1+1",
+            Value="1"
+        },
+        new SelectListItem
+        {
+            Text="2+1",
+            Value="2"
+        }
+    })
+<hr />
+@* html yazılış. *@
+Html biçimi:<input type="password" /> <br />
+
+@* şimdi helper kullanarak password oluşturalım *@ 
+Html helper Password:
+
+@Html.Password("sifre") <br />
+
+@* html yazılış *@
+Html hidden biçimi:<input type="hidden" value="3" /> <br />
+
+@* html helper Hidden *@
+Html Helper Hidden:
+
+@Html.Hidden("Id","Oguzhan")
+
