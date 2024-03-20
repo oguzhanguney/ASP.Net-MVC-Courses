@@ -12,7 +12,7 @@ Bu derste Web Helper konusuna giriş yapacağız.
 
 		ÖR:Online satış sitesinde kullanıcı tarafından sisteme yüklenen resimleri yazı yada resimle watermark ekleyebiliriz.bu resimleri kırpabilir,döndürebiliriz.
 
-		+Yani web helpers ile birlikte resimlerde işlemler yapabiliyoruz.
+		+Yani web helpers ile birlikte resimlerde işlemler(web image ile) yapabiliyoruz.
 
 		ÖR:Stok takip sistemi gibi yazılımlarda ürünleri bir grid yardımı ile kullanıcılara gösterebiliriz.bu grid üzerinde arama ,ürünle ilgili işlem,yada bu gridin excel ve pdf çıktısını alabiliriz.
 
@@ -27,5 +27,9 @@ Bu derste Web Helper konusuna giriş yapacağız.
 		+Asp.net mvc projelerinde web helper ları kullanmak için view yada controllerda System.Web.Helpers namespace sini eklememiz gerekir.	
 
 
-	1)Chart oluşturma:
+	1)Charts:(@using System.Web.Helpers)
 		AddSeries metodu içerisinde charttype propertisi ile chartların tipini değiştirebiliriz.(chartType:"Point") (Buble,Line,Spline,Column,Bar,Area,SplineArea,Pie,Doughnut: default -Column )
+
+	2)İmages:
+		İlk önce resmimizi yüklememiz gerekir.sonra bu resmin yolunu bir prop yardımıyla gerçekleştirmemiz gerekir.
+		

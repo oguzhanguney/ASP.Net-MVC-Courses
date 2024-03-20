@@ -14,7 +14,7 @@ namespace MVCWebHelpers.Controllers
         {
             return View();
         }
-        //Chart oluşturma:
+        //Charts:
         public ActionResult ChartTekVeri()
         {
             return View();
