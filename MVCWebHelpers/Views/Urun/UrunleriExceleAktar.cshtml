@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVCWebHelpers.Models.Urun>
+@{
+    ViewBag.Title = "UrunleriExceleAktar";
+
+    var grid = new WebGrid(Model);
+}
+
+<h2>UrunleriExceleAktar</h2>
+
+<input id="btExceleAktar" type="button" value="Excel'e Aktar" />
+<div id="sonuc"></div>
+
+@* Jquery ile bu divde iframe oluşturalım ve excele aktarmak için bir actionresult tanımlayalım. öncelikle script dosyasından jqueryi getirelim. *@
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $("#btExceleAktar").on('click', function () {
+            $('<iframe src="/Urun/ExceleAktar"></iframe>').appendTo('#sonuc').hide();
+        });
+    });
+</script>

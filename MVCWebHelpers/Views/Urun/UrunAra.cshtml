@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVCWebHelpers.Models.Urun>
+
+ 
+
+<h2>UrunAra</h2>
+
+@*  Burada bir form etiketi içerisinde post işlemi yapacagız.butona bastgımız zaman arama yapacak. *@
+
+<form method="post">
+
+    <div>
+        Ürün Adı:
+        <input type="text" name="urunAd" value="@Request["urunAd"]" />
+        <input type="submit" value="Ara" />
+
+    </div>
+</form>
+
+@{ 
+    string urunAd = Request["urunAd"];
+
+    var urunler = MVCWebHelpers.Models.Veri.UrunSorgula(urunAd);
+
+    var grid = new WebGrid(urunler);
+}
+
+@grid.GetHtml()

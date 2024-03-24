@@ -32,4 +32,21 @@ Bu derste Web Helper konusuna giriş yapacağız.
 
 	2)İmages:
 		İlk önce resmimizi yüklememiz gerekir.sonra bu resmin yolunu bir prop yardımıyla gerçekleştirmemiz gerekir.
+
+	3)Web Grid:
+		asp.net mvc projelerinde server side yani sayfalama yapabilen  veri türlerini strongly type olarak kullanabilen ve istendiğinde Ajax desteği ile eklenebilecek bir grid yapısı bulunmaktadır.
+		web grid yardımcı sınıfı ile bu grid yapısını oluşturabiliriz. bir urun controller oluşturup grid yapısını kullanalım. 
+
+		web grid düzenleme işlemleri yapalım. column isimlerini değiştirelim. ve hangi sütuna göre sıralamak istedigimizi belirtelim. ve rowsperpage ile bir sayfa içerisinde kaç tane gösterecegimizi belirtelim.
+		ilk sayfaya ve son sayfaya git eklemek içinde mode parametresini kullanalım.
+
+		Web gridde satırı tıklanabilir yapmak için layout sayfamızı açıyoruz ve style tanımlıyoruz.Ve bir script tagi açıp jquery toggle ile bunu tetikleyelim.
+		bunu layoutta yapmamızın nedeni eğer ürünlistesinde yapsaydık renderbody scriptlerin üzerinde oldugu için jquery sınıfı tanınmamış olacaktı ve çalışmayacaktı.
+
+		şimdi grid nesneleri içerisinde arama işlemi yapacagız.ürün adlarına göre arama yapacagız.bu işlemi de veri diye bir sınıf oluşturup yapacagız.
+
+
+		şimdi biz bu web grid verilerini excell e aktaralım.
+		-Öncelikle uruncontroller içerisinde ürünleriexcele aktar diye bir actionresult tanımlayalım.
+
 		

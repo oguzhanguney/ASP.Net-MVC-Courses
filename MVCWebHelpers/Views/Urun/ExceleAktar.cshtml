@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVCWebHelpers.Models.Urun>
+
+@* bunun içerisinde excele aktarma yaptıgımız için sayfamızın özelliklerini değiştirmemiz lazım . *@
+
+@{ 
+    Response.AddHeader("Content-disposition", "attachment;filename=urunler.xls");
+    Response.ContentType = "application/octet-stream";
+
+    //excele aktarırken istedigimiz gibi düzenleme yapabiliriz.
+
+    var urunler = Model;
+    var ilkSatır = urunler.FirstOrDefault();
+
+}
+
+<table style="border:1px solid black;">
+
+    <tr style="font-weight:bold">
+        @foreach(var ozellik in ilkSatır.GetType().GetProperties())
+            {
+                <td style="border:1px solid #a59f9f;">@ozellik.Name</td>
+            }
+    </tr>
+    @foreach(var urun in urunler)
+            {
+                <tr>
+                    @foreach(var urunOzelligi in urun.GetType().GetProperties())
+                    {
+                       <td style="border:1px solid black;">@urunOzelligi.GetValue(urun,null)</td> 
+                    }
+                </tr>
+            }
+
+
+</table>
+

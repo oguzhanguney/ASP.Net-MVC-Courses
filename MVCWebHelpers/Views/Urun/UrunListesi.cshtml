@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MVCWebHelpers.Models.Urun>
+
+<h2>UrunListesi</h2>
+
+@{ 
+    var grid = new WebGrid(Model,defaultSort:"Id",rowsPerPage:5);
+}
+
+<div>@grid.GetHtml(
+
+    columns:grid.Columns(
+
+        grid.Column("Id","Ürün Id"),
+        grid.Column("Ad","Ürün Adı"),
+        grid.Column("Fiyat", "Ürün Fiyatı"),
+        grid.Column("Adet", "Ürün Adeti")
+        ),mode:WebGridPagerModes.All //bu method ile sayfaları sadece numeric olarak yada ilk ve son sayfaya direk gitmesini sağlayabiliriz.
+
+    )
+    
+    
+    
+    
+    
+    </div>
