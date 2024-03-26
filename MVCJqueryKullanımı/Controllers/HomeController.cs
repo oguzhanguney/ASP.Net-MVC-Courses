@@ -25,5 +25,30 @@ namespace MVCJqueryKullanımı.Controllers
         {
             return View();
         }
+
+        //Html elemanlarını jquery ile seçme:
+        public ActionResult Index4()
+        {
+            return View();
+        }
+
+        //Jquery ile kritere göre ve özelliklere göre seçme işlemi:
+        public ActionResult Index5()
+        {
+            return View();
+        }
+
+        //Jquery ile html elemanlarını filtreleme:
+        public ActionResult Index6()
+        {
+            return View();
+        }
+
+        //Jquery ile html elemanlarını yönetme:
+        public ActionResult Index7()
+        {
+            return View();
+        }
+
     }
 }

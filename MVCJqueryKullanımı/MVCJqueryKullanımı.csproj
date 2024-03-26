@@ -113,6 +113,10 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Views\Home\Index4.cshtml" />
+    <Content Include="Views\Home\Index5.cshtml" />
+    <Content Include="Views\Home\Index6.cshtml" />
+    <Content Include="Views\Home\Index7.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,24 +1,24 @@
-﻿
-<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+﻿<script src="~/Scripts/jquery-3.7.1.min.js"></script>
 <script>
 
     $(document).ready(function () {
 
         $.uyeler = ["Ali", "Oguzhan", "Harun"];
         console.log($.uyeler);//konsol ekranına yazmak için:
-        
+
 
         //degerlere for döngüsü kullanmak erişmek için:
-        JQuery.each($.uyeler, function (i, d) {
+        jQuery.each($.uyeler, function (index, deger) {
 
-            console.log(i);
-            console.log(d);
+            console.log(index);
+            console.log(deger);
         })
-        
-        
+
+
     })
 
 </script>
+
 
 <!DOCTYPE html>
 
@@ -26,6 +26,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index3</title>
+
 </head>
 <body>
     <div>

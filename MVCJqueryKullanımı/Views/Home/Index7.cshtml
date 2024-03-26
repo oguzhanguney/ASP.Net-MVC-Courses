@@ -1,0 +1,67 @@
+﻿
+
+<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+
+        //get metodu ile html etiketlerini getirip gösterebiliriz.
+        //text metodu ile html etiketlerinin içerisini ekrana yazdırabiliriz.
+        //html metodu ile html etiketlerinin içerisin html formatında yazdırabiliriz.
+
+        $.divler = $("div").get();
+        $.divMesaj = "";
+
+        for ($.i = 0; $.i < $.divler.length; $.i++) {
+            $.divMesaj += $.divler[$.i].id + "\n";
+        }
+
+        alert($.divMesaj);
+
+
+        //inputa girilen değeri jquery ile yakalamak için:
+        $("#btn").click(function () {
+            $.val = $("#input").val();
+            alert($.val);
+        })
+
+        //jquery ile bir değişkene eleman eklemek istedigimizde :
+        $("#div0").append("- ogs");
+        //bir html ögesini kopyalamak istiyorsak:
+        $.buton = $("#btn").clone();
+        $("div").append($.buton);
+
+        //html ögesinden sonra birşeyler eklemek için: insertBefore ile öncesine eklenir.
+        $("#btn").insertAfter("#div2");
+        
+
+
+    })
+
+
+
+</script>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index7</title>
+</head>
+<body>
+    
+        <div id="div0">0</div>
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+
+        <input type="text" id="input" />
+        <input type="button" id="btn" value="Tıkla" />
+
+
+    
+</body>
+</html>

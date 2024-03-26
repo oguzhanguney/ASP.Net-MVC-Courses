@@ -1,0 +1,38 @@
+﻿
+<script src="~/Scripts/jquery-3.7.1.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $("input:first");//first filtresi input içerisindeki birinci elemanı getir.
+        $("input:last");//last filtresi input içerisindeki sonuncu elemanı getir.
+        $("input:eq(2)");//2. indexli elemana ulaşmış oluruz
+        $("input:not(#ad)");// id si ad olan inputlar haricindekileri seç.
+        $("input:gt(4)");//indexi 4 ten büyük olanları getir
+        $("input:lt(4)");//indexi 4 ten küçük olanları getir
+        $("input:first-child"); //seçilen elemanlardan ilkini ve  o elemanın altındaki aynı türden ilk elemanı seçmek için.
+        $("div:has(input)");//seçilen elemanların özelliklerine sahip olanları seçmek için :içinde input olan divi dönderir.
+        $("div:hidden");
+        $("div:visible");
+        $("div:disable"); 
+        $("div:enable"); 
+    })
+
+
+</script>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index5</title>
+</head>
+<body>
+    <div>
+        
+
+
+    </div>
+</body>
+</html>
+
