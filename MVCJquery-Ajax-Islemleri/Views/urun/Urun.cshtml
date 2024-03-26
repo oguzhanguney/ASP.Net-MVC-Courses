@@ -1,0 +1,46 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Urun</title>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                //ajax() fonksiyonu:
+                $.ajax({
+                    url: "https://localhost:44335/api/UrunApi/Urun",
+                    type: "GET",
+                    dataType: "json",
+                    success: function (urun) {
+                        alert(urun.Ad);
+                    }
+                })
+                //getJSON fonksiyonu:
+                $.getJSON('https://localhost:44335/api/UrunApi/Urun').done(function (urun) {
+                    alert(urun.Fiyat);
+                })
+            })
+
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <div> 
+        @* bir buton tanımlayalım ve butona tıklandıgında ilk ürünü getirsin. *@
+
+        <input type="button" id="btn" value="Tıkla" />
+    </div>
+</body>
+</html>
