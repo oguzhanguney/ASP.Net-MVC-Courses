@@ -51,6 +51,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCJqueryKullanımı", "MVC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCJquery-Ajax-Islemleri", "MVCJquery-Ajax-Islemleri\MVCJquery-Ajax-Islemleri.csproj", "{497BE969-9180-4E89-9BF0-B2E75766D58F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC Jquery Uygulamaları", "MVC Jquery Uygulamaları", "{4590DA4D-B6FE-4003-8829-35C12DAB5EF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC-CokluDosyaYukleme", "MVC-CokluDosyaYukleme\MVC-CokluDosyaYukleme.csproj", "{CE1433CF-F13F-4336-AC56-2391DC6F1BDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC-TablodakiTumKayıtIslemleri", "MVC-TablodakiTumKayıtIslemleri\MVC-TablodakiTumKayıtIslemleri.csproj", "{2E55437E-4C58-4DF4-B421-B1912C8ACA72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC-KarakterSayısı", "MVC-KarakterSayısı\MVC-KarakterSayısı.csproj", "{4D1BB054-1DD3-4D80-8E2D-66B5F2946416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,9 +161,26 @@ Global
 		{497BE969-9180-4E89-9BF0-B2E75766D58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{497BE969-9180-4E89-9BF0-B2E75766D58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{497BE969-9180-4E89-9BF0-B2E75766D58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1433CF-F13F-4336-AC56-2391DC6F1BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1433CF-F13F-4336-AC56-2391DC6F1BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1433CF-F13F-4336-AC56-2391DC6F1BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1433CF-F13F-4336-AC56-2391DC6F1BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E55437E-4C58-4DF4-B421-B1912C8ACA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E55437E-4C58-4DF4-B421-B1912C8ACA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E55437E-4C58-4DF4-B421-B1912C8ACA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E55437E-4C58-4DF4-B421-B1912C8ACA72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1BB054-1DD3-4D80-8E2D-66B5F2946416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1BB054-1DD3-4D80-8E2D-66B5F2946416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1BB054-1DD3-4D80-8E2D-66B5F2946416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1BB054-1DD3-4D80-8E2D-66B5F2946416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE1433CF-F13F-4336-AC56-2391DC6F1BDE} = {4590DA4D-B6FE-4003-8829-35C12DAB5EF8}
+		{2E55437E-4C58-4DF4-B421-B1912C8ACA72} = {4590DA4D-B6FE-4003-8829-35C12DAB5EF8}
+		{4D1BB054-1DD3-4D80-8E2D-66B5F2946416} = {4590DA4D-B6FE-4003-8829-35C12DAB5EF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC857D5E-7926-4408-814D-794FB80ECFEE}

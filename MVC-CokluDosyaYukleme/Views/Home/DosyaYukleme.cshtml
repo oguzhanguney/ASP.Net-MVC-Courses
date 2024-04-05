@@ -1,0 +1,52 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DosyaYukleme</title>
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+
+        //dosya ekle butonuna tıklandıgında tekrar dosya yüklemek için yeni bir input oluşturacagız ve bu işlemi 20 ye kadar yapacagız:
+
+        $(document).ready(function () {
+
+            $.kontrolSayisi = 1;
+            $("#btnDosyaKontroluEkle").click(function () {
+                if ($.kontrolSayisi <= 20) {
+                    $.sonDosyaKontroluDivi = $("#dosya" + $.kontrolSayisi);
+                    $.yeniDosyaKontroluveDiv = $.sonDosyaKontroluDivi.clone(true);
+                    $.yeniDosyaKontroluveDiv.attr("id", "dosya" + (++$.kontrolSayisi));
+                    $.yeniDosyaKontroluveDiv.insertAfter($.sonDosyaKontroluDivi)
+                }
+            })
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("CokluDosyaYukleme", "Home", FormMethod.Post, new { @enctype = "multipart/form-data", @id = "form1" }))
+        {
+            <div id="dosyaKontrolleri">
+                <div id="dosya1">
+                    <input type="file" name="dosyalar" />
+
+                </div>
+            </div>
+            <input type="button" id="btnDosyaKontroluEkle" value="Yeni Dosya Ekle" />
+            <br /><br />
+
+            <input type="submit" id="btnYukle" value="Yükle" />
+        }
+
+
+    </div>
+</body>
+</html>

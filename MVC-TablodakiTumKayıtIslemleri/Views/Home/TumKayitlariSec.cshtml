@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TumKayitlariSec</title>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("input[name='chbTumunuSec']").click(function () {
+                $.seciliMi = this.checked;
+
+                $("input[name='chbUrunSec']").each(function () {
+                    this.checked = $.seciliMi;
+                });
+            });
+            $("#btnSeciliKayitlariSil").click(function () {
+                $.seciliSatirlar = $("input[type='checkbox'][name='chbUrunSec']:checked");
+
+                if ($.seciliSatirlar.length/0) {
+                    $.seciliIdler = "";
+                    for (var i = 0; i < $.seciliSatirlar.length; i++) {
+                        $.seciliIdler += $.seciliSatirlar[i].value;
+                        if (i != $.seciliSatirlar.length - 1) {
+                            $.seciliSatirlar += "";
+                        }
+                    }
+                    $.veri = { seciliIdler: $.seciliIdler };
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("SeciliUrunleriSil", "Home")',
+                        data: $.veri,
+                        success: function (data) {
+                            alert("İşlem Başarılı");
+                        }
+                    })
+                }
+            })
+
+
+        });
+
+
+
+
+    </script>
+
+    <style>
+        .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Seç <span class="tab"></span></th>
+            <th>Ürün Adı<span class="tab"></span></th>
+            <th>Ürün Fiyatı<span class="tab"></span></th>
+        </tr>
+        @foreach (MVC_TablodakiTumKayıtIslemleri.Models.Urun urun in ViewBag.Urunler)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="chbUrunSec" value="@urun.Id" />
+                </td>
+                <td>@urun.Ad</td>
+                <td>@urun.Fiyat</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <div>
+        <input type="checkbox" name="chbTumunuSec" /><b>Tümünü Seç</b>
+    </div>
+    <br />
+    <div>
+        <input type="button" id="btnSeciliKayitlariSil" value="Sil" />
+    </div>
+
+</body>
+</html>

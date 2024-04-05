@@ -1,0 +1,2 @@
+﻿Bu projede Karakter sayısı hesaplama programı yapacagız.Jquery ile belirli karakter girilmesi gereken alanları oluşturabilir ve  kaç karakter hakkımız kaldıgını hesaplayabiliriz.
+Öncelikle controller da bir action oluşturalım.
